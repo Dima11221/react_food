@@ -1,0 +1,57 @@
+@use "../../../styles/globals";
+
+.recipeWrapper {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgVid {
+  width: 500px;
+  height: 500px;
+}
+
+.recipeInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.videoRecTitle {
+  margin-bottom: 20px;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+
+	th, td {
+		padding: 10px;
+		border: 1px solid #ddd;
+	}
+
+	thead {
+		background-color: #f2f2f2;
+
+		th {
+			font-weight: bold;
+		}
+	}
+
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: #f9f9f9;
+			}
+
+			&:hover {
+				background-color: #f1f1f1;
+			}
+		}
+	}
+}

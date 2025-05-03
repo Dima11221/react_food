@@ -4,6 +4,7 @@ import { getFilteredCategory } from "../../../api.ts";
 import {Preloader} from "../../Preloader/Preloader.tsx";
 import {MealList} from "../../MealList/MealList.tsx";
 import {IMealProps} from "../../../Types/Types.ts";
+import style from './style.module.scss'
 
 const Category = () => {
   const {name} = useParams<{name?: string}>();
@@ -11,8 +12,8 @@ const Category = () => {
 
   const navigate = useNavigate();
   // console.log(navigate)
-  const location = useLocation();
-  console.log(location)
+  const {pathname, search} = useLocation();
+  console.log(pathname, search)
   // const value2 = useMatch();
   // console.log(value2)
   const goBack = () => {
@@ -29,8 +30,13 @@ const Category = () => {
   }, [name]);
 
   return (
-    <>
-      <button onClick={goBack}>Go back</button>
+    <div>
+      <button
+          className={`${style.btn} ${style.btnPos} ${style.btnReset}`}
+          onClick={goBack}
+      >
+        Go back
+      </button>
 
       {!meals.length && (
         <Preloader />
@@ -39,10 +45,7 @@ const Category = () => {
       {meals.length && (
         <MealList meals={meals} />
       )}
-
-
-    </>
-
+    </div>
   )
 }
 

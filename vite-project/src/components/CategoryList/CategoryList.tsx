@@ -8,7 +8,6 @@ interface ICategoryListProps {
 
 const CategoryList = ({catalog = []}: ICategoryListProps) => {
 
-
   return (
     <div className={style.goodsList}>
       {catalog.map((el) => (
