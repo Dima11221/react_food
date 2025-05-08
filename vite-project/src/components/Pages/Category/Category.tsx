@@ -56,25 +56,6 @@ const Category = () => {
         	<MealList meals={currentItems} />
 
 					<Pagination currentPage={currentPage} pageCount={pageCount} setCurrentPage={setCurrentPage} />
-					{/*<div className={style.pagesList}>*/}
-					{/*	<div className={`${style.btnsWrapper}`}>*/}
-					{/*		<button*/}
-					{/*			className={`${style.btn} ${style.btnReset}`}*/}
-					{/*			onClick={handlePrevPage}*/}
-					{/*			disabled={currentPage === 1}*/}
-					{/*		>*/}
-					{/*			Previous Page*/}
-					{/*		</button>*/}
-					{/*		<button*/}
-					{/*			className={`${style.btn} ${style.btnReset}`}*/}
-					{/*			onClick={handleNextPage}*/}
-					{/*			disabled={currentPage === pageCount}*/}
-					{/*		>*/}
-					{/*			Next Page*/}
-					{/*		</button>*/}
-					{/*	</div>*/}
-					{/*	<span>{currentPage} of {pageCount}</span>*/}
-					{/*</div>*/}
 				</>
       )}
     </div>
