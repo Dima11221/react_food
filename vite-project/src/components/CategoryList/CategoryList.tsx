@@ -9,7 +9,7 @@ interface ICategoryListProps {
 const CategoryList = ({catalog = []}: ICategoryListProps) => {
 
   return (
-    <div className={style.goodsList}>
+    <div className={style.listItems}>
       {catalog.map((el) => (
         <CategoryItem key={el.idCategory} {...el} />
       ))}

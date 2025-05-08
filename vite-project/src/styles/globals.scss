@@ -1,5 +1,5 @@
-@use "./normalize";
 @use "./media.scss";
+@use "./normalize";
 
 html {
     box-sizing: border-box;
@@ -49,11 +49,14 @@ body {
 
 .flex {
     display: flex;
-    flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+
+	@media (max-width: 520px) {
+		flex-wrap: wrap;
+	}
 }
 
 .flexRow {
@@ -109,6 +112,13 @@ body {
 }
 
 .btnPos {
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
+.listItems {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+}

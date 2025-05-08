@@ -21,23 +21,17 @@ const Header = ({title}: IProps) => {
                     <Link to='/'>Главная страница</Link>
                 </h3>
             </div>
-            <ul>
-              <li>
-                <h3 className={`${style.headFootWrapper} ${style.headLink}`}>
+            <div className={`${style.container} ${style.headFootWrapper}`}>
+                <h3 className={`${style.headLink}`}>
                   <a href='' target='_blank'>Ссылка на репозиторий</a>
-                </h3>
-              </li>
-              <li>
-                <h3 className={`${style.headFootWrapper} ${style.headLink}`}>
+								</h3>
+                <h3 className={`${style.headLink}`}>
                   <Link to='/contacts' target='_self'>Contacts</Link>
                 </h3>
-              </li>
-              <li>
-                <h3 className={`${style.headFootWrapper} ${style.headLink}`}>
+                <h3 className={`${style.headLink}`}>
                   <Link to='/about' target='_self'>About</Link>
                 </h3>
-              </li>
-            </ul>
+            </div>
         </header>
     )
 

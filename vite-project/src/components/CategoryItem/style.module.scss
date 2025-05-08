@@ -1,37 +1,27 @@
 @use "../../styles/globals";
 
-.title {
-  transition: 0.3s;
-}
-
-.title:hover {
-  color: var(--blue-color);
-}
 
 .CategoryItem {
+	position: relative;
   display: flex;
   flex-direction: column;
+	justify-content: space-between;
   gap: 10px;
   width: 260px;
-  //min-height: 480px;
+	height: 90%;
   border: 1px solid var(--light-grey);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);;
   border-radius: 10px;
   margin: .5rem 0 1rem 0;
+	padding-bottom: 10px;
 }
 
 .logo {
-  //width: 260px;
-  //height: 380px;
-  //border-radius: 10px;
+  border-radius: 10px;
 }
 
 .left {
   padding: 0 12px;
-}
-
-.linkStyle {
-  padding: 12px;
 }
 
 .cardContent {

@@ -5,10 +5,12 @@ import {Preloader} from "../../Preloader/Preloader.tsx";
 import {MealList} from "../../MealList/MealList.tsx";
 import {IMealProps} from "../../../Types/Types.ts";
 import style from './style.module.scss'
+import {Pagination} from "../../Pagination/Pagination.tsx";
 
 const Category = () => {
   const {name} = useParams<{name?: string}>();
   const [meals, setMeals] = useState<IMealProps[]>([])
+	const [currentPage, setCurrentPage] = useState<number>(1)
 
   const navigate = useNavigate();
   // console.log(navigate)
@@ -20,7 +22,14 @@ const Category = () => {
     navigate(-1);
   }
 
+	const itemsPerPage = 8;
+	const startIndex = (currentPage - 1) * itemsPerPage;
+	const endIndex = currentPage * itemsPerPage;
+	const currentItems = meals.slice(startIndex, endIndex);
+	const pageCount = Math.ceil(meals.length / itemsPerPage);
+
   useEffect(() => {
+		setCurrentPage(1)
     if (name){
       getFilteredCategory({catName: name}).then((data) => {
         setMeals(data.meals || [])
@@ -42,8 +51,31 @@ const Category = () => {
         <Preloader />
       )}
 
-      {meals.length && (
-        <MealList meals={meals} />
+      {meals.length > 0 && (
+				<>
+        	<MealList meals={currentItems} />
+
+					<Pagination currentPage={currentPage} pageCount={pageCount} setCurrentPage={setCurrentPage} />
+					{/*<div className={style.pagesList}>*/}
+					{/*	<div className={`${style.btnsWrapper}`}>*/}
+					{/*		<button*/}
+					{/*			className={`${style.btn} ${style.btnReset}`}*/}
+					{/*			onClick={handlePrevPage}*/}
+					{/*			disabled={currentPage === 1}*/}
+					{/*		>*/}
+					{/*			Previous Page*/}
+					{/*		</button>*/}
+					{/*		<button*/}
+					{/*			className={`${style.btn} ${style.btnReset}`}*/}
+					{/*			onClick={handleNextPage}*/}
+					{/*			disabled={currentPage === pageCount}*/}
+					{/*		>*/}
+					{/*			Next Page*/}
+					{/*		</button>*/}
+					{/*	</div>*/}
+					{/*	<span>{currentPage} of {pageCount}</span>*/}
+					{/*</div>*/}
+				</>
       )}
     </div>
   )

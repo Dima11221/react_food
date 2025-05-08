@@ -9,7 +9,7 @@ interface IMealList {
 const MealList = ({meals}: IMealList) => {
 
   return (
-    <div className={style.mealList}>
+    <div className={style.listItems}>
       {meals.map((meal) => (
         <Meal key={meal.idMeal} {...meal} />
       ))}

@@ -1,12 +1,1 @@
 @use "../../styles/globals";
-
-
-.goodsList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  //align-items: baseline;
-  gap: 10px;
-  margin: 30px;
-}

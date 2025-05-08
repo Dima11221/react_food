@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <Header title='Rect Food' />
+      <Header title='React Food' />
         <main className="mainWrapper">
           <Routes>
             <Route path="/" element={<Home />}/>
