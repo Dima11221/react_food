@@ -5,7 +5,6 @@ import {Preloader} from "../../Preloader/Preloader.tsx";
 import {CategoryList} from "../../CategoryList/CategoryList.tsx";
 import {ICategoryItemProp} from "../../../Types/Types.ts";
 import {Search} from "../../Search/Search.tsx";
-import style from "./style.module.scss"
 import {Pagination} from "../../Pagination/Pagination.tsx";
 
 const Home = () => {
@@ -58,7 +57,7 @@ const Home = () => {
   }, [search]);
 
   return (
-    <div className={style.homeWrapper}>
+    <div>
       <Search handleSearch={handleSearch} />
       <div>
         {!catalog.length && (

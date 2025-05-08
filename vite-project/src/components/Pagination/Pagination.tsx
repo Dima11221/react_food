@@ -1,4 +1,4 @@
-import style from "../Pages/Home/style.module.scss";
+import style from "../Pagination/style.module.scss";
 
 interface IPagesProps {
 	currentPage: number,

@@ -1,5 +1,5 @@
 import {Meal} from "../Meal/Meal.tsx";
-import style from './style.module.scss'
+import style from "../MealList/style.module.scss";
 import {IMealProps} from "../../Types/Types.ts";
 
 interface IMealList {
@@ -9,7 +9,7 @@ interface IMealList {
 const MealList = ({meals}: IMealList) => {
 
   return (
-    <div className={style.listItems}>
+    <div className={`${style.listItems}`}>
       {meals.map((meal) => (
         <Meal key={meal.idMeal} {...meal} />
       ))}

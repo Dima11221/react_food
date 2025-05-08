@@ -1,6 +1,6 @@
 import {CategoryItem} from "../CategoryItem/CategoryItem.tsx";
 import {ICategoryItemProp} from "../../Types/Types.ts";
-import style from './style.module.scss';
+import style from "../CategoryList/style.module.scss"
 
 interface ICategoryListProps {
   catalog: ICategoryItemProp[];
