@@ -2,8 +2,6 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Header} from "./layout/Header/Header.tsx";
 import {Footer} from "./layout/Footer/Footer.tsx";
 import {Home} from "./components/Pages/Home/Home.tsx";
-import {About} from "./components/Pages/About/About.tsx";
-import {Contact} from "./components/Pages/Contact/Contact.tsx";
 import {NotFound} from "./components/Pages/NotFound/NotFound.tsx";
 import './styles/main.scss'
 import {Category} from "./components/Pages/Category/Category.tsx";
@@ -16,9 +14,7 @@ function App() {
       <Header title='React Food' />
         <main className="mainWrapper">
           <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/contacts" element={<Contact />}/>
+            <Route path="/react_food" element={<Home />}/>
             <Route path='/category/:name' element={<Category />}/>
             <Route path='/meal/:id' element={<Recipe />}/>
             <Route path="*" element={<NotFound />}/>
