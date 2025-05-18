@@ -46,8 +46,7 @@ const Home = () => {
       // console.log(search.split('='));
       // console.log(data.categories[0].strCategory);
       setFilteredCatalog(
-        search
-          ? data.categories.filter((item) =>
+        search ? data.categories.filter((item) =>
 						item.strCategory
 							.toLowerCase()
 							.includes(search.split('=')[1].toLowerCase())
