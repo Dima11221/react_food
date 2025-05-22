@@ -12,14 +12,14 @@ function App() {
   return (
     <Router>
       <Header title='React Food' />
-        <main className="mainWrapper">
+        <div className="mainWrapper">
           <Routes>
             <Route path="/react_food" element={<Home />}/>
             <Route path='/category/:name' element={<Category />}/>
             <Route path='/meal/:id' element={<Recipe />}/>
             <Route path="*" element={<NotFound />}/>
           </Routes>
-        </main>
+        </div>
       <Footer />
     </Router>
   )
